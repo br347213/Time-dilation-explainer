@@ -3,68 +3,165 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#050b14">
+<meta name="theme-color" content="#06101d">
 <title>How Can Two People Experience Different Amounts of Time?</title>
 <style>
-:root{--bg:#050b14;--panel:#0b1524;--panel2:#0e1b2d;--ink:#f7f8fb;--muted:#aab7c9;--line:#223653;--blue:#6ddcff;--green:#8ff0bd;--gold:#ffd27a;--shadow:0 22px 70px rgba(0,0,0,.38)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% -10%,rgba(43,105,194,.2),transparent 35%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45;padding-bottom:env(safe-area-inset-bottom)}
-.wrap{width:min(920px,calc(100% - 28px));margin:auto}.top{position:sticky;top:0;z-index:5;background:rgba(5,11,20,.86);backdrop-filter:blur(14px);border-bottom:1px solid rgba(120,160,220,.12)}.top .wrap{min-height:52px;display:flex;align-items:center;gap:9px;font-size:12px;font-weight:850;letter-spacing:.03em;color:#dfe8f5}.dot{width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px var(--blue)}
-.hero{min-height:68vh;display:flex;flex-direction:column;justify-content:center;text-align:center;padding:52px 0 32px}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);font-weight:900}.hero h1,.section h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em}.hero h1{font-size:clamp(43px,7vw,75px);line-height:.98;margin:13px auto 16px;max-width:840px}.hero p{max-width:640px;margin:0 auto;font-size:clamp(18px,2.4vw,22px);color:var(--muted)}.down{margin:28px auto 0;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;color:var(--blue);font-size:22px}
-.story{padding:36px 0 54px}.art{display:block;width:100%;height:auto;border-radius:25px;border:1px solid rgba(119,159,218,.22);box-shadow:var(--shadow);background:#08111d}.caption{max-width:760px;margin:20px auto 0;text-align:center}.caption h2{font-size:clamp(30px,5vw,47px);line-height:1.02;margin:0 0 8px}.caption p{font-size:18px;color:var(--muted);margin:0}.caption strong{color:var(--ink)}
-.try{padding:32px 0 58px}.control{border:1px solid var(--line);background:linear-gradient(180deg,#0d192a,#09131f);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}.control-head{padding:22px 20px 14px}.control-head h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(29px,4vw,42px);font-weight:500;letter-spacing:-.025em;margin:0}.control-head p{color:var(--muted);margin:6px 0 0}.slider-wrap{padding:14px 20px 20px;border-top:1px solid rgba(110,150,200,.12)}.speed-line{display:flex;justify-content:space-between;gap:12px;align-items:end}.speed-line b{font-size:15px}.speed-line span{font-size:25px;font-weight:900;color:var(--green);font-variant-numeric:tabular-nums}input[type=range]{width:100%;height:44px;background:transparent;accent-color:var(--blue);margin:9px 0 2px;touch-action:pan-y}input[type=range]::-webkit-slider-runnable-track{height:8px;background:#213754;border-radius:99px}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:#fff;border:4px solid var(--blue);box-shadow:0 4px 14px rgba(0,0,0,.4)}.presets{display:flex;gap:8px;flex-wrap:wrap}.preset{border:1px solid var(--line);background:#101e31;color:#dfe8f5;border-radius:999px;padding:7px 11px;font-size:13px;font-weight:850}.preset.active{border-color:var(--blue);color:var(--blue)}.ages{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line)}.agebox{padding:20px 14px;text-align:center}.agebox+.agebox{border-left:1px solid var(--line)}.agebox small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.09em;font-weight:850}.agebox b{display:block;font-size:31px;margin-top:4px;letter-spacing:-.03em}.agebox.trav b{color:var(--green)}.agebox.gap b{color:var(--gold)}
-.section{padding:42px 0 56px}.section-head{text-align:center;max-width:720px;margin:0 auto 20px}.section h2{font-size:clamp(34px,5vw,52px);line-height:1.02;margin:8px 0 9px}.section-head p{font-size:18px;color:var(--muted);margin:0}.mechanism{display:grid;grid-template-columns:1fr;gap:16px}.shot{border:1px solid var(--line);background:var(--panel);border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}.shot img{display:block;width:100%;height:auto}.shot-copy{padding:16px 17px 18px}.shot-copy b{display:block;font-size:19px;margin-bottom:3px}.shot-copy p{margin:0;color:var(--muted)}.rule{margin-top:18px;padding:19px 20px;border-radius:20px;background:#101e31;border:1px solid #345272;text-align:center;font-size:19px}.rule strong{color:var(--gold)}.clarify{margin:14px auto 0;max-width:730px;text-align:center;color:var(--muted);font-size:15px}
-.takeaway{padding:28px 0 62px}.take{padding:27px 22px;border-radius:25px;background:linear-gradient(180deg,#111f34,#0a1422);border:1px solid #36506d;box-shadow:var(--shadow);text-align:center}.take h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(34px,5vw,50px);font-weight:500;line-height:1.03;margin:0 0 12px}.take p{font-size:20px;color:#dce5f2;max-width:760px;margin:0 auto}.take em{font-style:normal;color:var(--gold)}
-.more{padding:0 0 58px}.more details{border:1px solid var(--line);border-radius:18px;background:#0a1524;padding:15px 17px}.more details+details{margin-top:10px}.more summary{font-weight:850;cursor:pointer}.more p{color:var(--muted);margin:9px 0 0}.footer{text-align:center;color:#75869c;font-size:12px;padding:0 0 36px}
-@media(max-width:650px){.wrap{width:min(100% - 22px,920px)}.hero{min-height:60vh;padding-top:42px}.story{padding:27px 0 44px}.art{border-radius:20px}.caption{padding:0 6px}.caption p,.section-head p{font-size:17px}.ages{grid-template-columns:1fr}.agebox+.agebox{border-left:0;border-top:1px solid var(--line)}.speed-line{align-items:flex-start;flex-direction:column}.section{padding:34px 0 48px}.rule{font-size:17px}.take p{font-size:18px}}
+:root{--bg:#06101d;--bg2:#091626;--panel:#0c1b2e;--panel2:#0a1727;--ink:#f6f8fb;--muted:#a9b8ca;--line:#28415f;--earth:#69d8ff;--trav:#89f0b9;--light:#ffd36f;--hot:#ff829d;--violet:#bba5ff;--shadow:0 24px 70px rgba(0,0,0,.34)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 20% -12%,rgba(49,105,180,.22),transparent 34%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45;padding-bottom:env(safe-area-inset-bottom)}
+button,input{font:inherit}.wrap{width:min(980px,calc(100% - 28px));margin:auto}.top{position:sticky;top:0;z-index:20;background:rgba(6,16,29,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(130,175,230,.12)}.top .wrap{height:54px;display:flex;align-items:center;gap:10px;font-size:12px;font-weight:850;letter-spacing:.05em}.mark{width:9px;height:9px;border-radius:50%;background:var(--earth);box-shadow:0 0 16px var(--earth)}
+.hero{padding:58px 0 32px;text-align:center}.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--earth)}h1,h2{letter-spacing:-.035em}.hero h1{font-size:clamp(42px,7vw,72px);line-height:.99;max-width:860px;margin:10px auto 14px}.hero p{max-width:680px;margin:0 auto;color:var(--muted);font-size:clamp(18px,2.2vw,22px)}.hero strong{color:var(--ink)}
+.section{padding:48px 0}.section-head{text-align:center;max-width:760px;margin:0 auto 22px}.section-head h2{font-size:clamp(32px,5vw,50px);line-height:1.03;margin:8px 0}.section-head p{margin:0;color:var(--muted);font-size:18px}.panel{background:linear-gradient(180deg,rgba(14,31,53,.98),rgba(8,19,33,.98));border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow)}
+.event-map{padding:22px;overflow:hidden}.event-map svg{display:block;width:100%;height:auto}.event-caption{text-align:center;padding:0 22px 22px;font-size:20px;font-weight:850}.event-caption span{color:var(--trav)}
+.mechanism-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.mech-card{padding:16px;border:1px solid var(--line);border-radius:22px;background:var(--panel2)}.mech-label{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.mech-label b{font-size:17px}.tag{font-size:11px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;padding:6px 8px;border-radius:999px;background:#10263d;border:1px solid #315372;color:#dceafa}.diagram{width:100%;height:auto;display:block;border-radius:16px;background:#06101d;border:1px solid rgba(112,155,207,.22)}.micro{margin:10px 2px 0;color:var(--muted);font-size:15px}.runbar{display:flex;justify-content:center;margin-top:14px}.run{border:1px solid #42668a;background:#102742;color:#fff;border-radius:999px;padding:10px 15px;font-weight:850;cursor:pointer}.run:active{transform:translateY(1px)}
+.logic{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;margin-top:18px}.logic-card{padding:17px;border-radius:18px;background:#0d1d31;border:1px solid var(--line);text-align:center;display:grid;place-items:center;min-height:126px}.logic-icon{height:42px;display:grid;place-items:center;margin-bottom:7px}.logic-card b{font-size:16px}.logic-card small{display:block;color:var(--muted);font-size:12px;margin-top:4px}.arrow{display:grid;place-items:center;color:#66819f;font-size:26px;font-weight:900}.logic-card:last-child{border-color:#5d553a}.logic-card:last-child b{color:var(--light)}
+.note{max-width:760px;margin:14px auto 0;text-align:center;color:var(--muted);font-size:14px}.note strong{color:var(--ink)}
+.bodyboard{padding:20px}.bodytop{display:grid;grid-template-columns:150px 1fr 1fr;gap:10px;align-items:end;padding-bottom:12px;border-bottom:1px solid var(--line)}.bodytop div:nth-child(2){color:var(--earth);font-weight:900}.bodytop div:nth-child(3){color:var(--trav);font-weight:900}.proc{display:grid;grid-template-columns:150px 1fr 1fr;gap:10px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(88,125,168,.14)}.proc:last-child{border-bottom:0}.proc-name{font-weight:800}.strip{height:18px;position:relative;border-radius:999px;background:#11243b;overflow:hidden}.marks{position:absolute;inset:0;background:repeating-linear-gradient(90deg,currentColor 0 4px,transparent 4px 11px);opacity:.95}.earthmarks{color:var(--earth)}.travwrap{position:absolute;left:0;top:0;bottom:0;overflow:hidden;transition:width .25s ease}.travmarks{color:var(--trav);width:100%;height:100%;background:repeating-linear-gradient(90deg,currentColor 0 4px,transparent 4px 11px)}.local-normal{margin-top:14px;padding:14px 16px;border-radius:16px;background:#0f2238;border:1px solid #31506e;text-align:center;color:#dce7f4}.local-normal strong{color:#fff}
+.try{overflow:hidden}.controls{padding:20px}.speedrow{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}.speedrow b{font-size:17px}.speedval{color:var(--trav);font-size:26px;font-weight:950;font-variant-numeric:tabular-nums}input[type=range]{width:100%;height:44px;background:transparent;accent-color:var(--earth);touch-action:pan-y;margin:8px 0 2px}input[type=range]::-webkit-slider-runnable-track{height:8px;background:#213b59;border-radius:999px}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:#fff;border:4px solid var(--earth);box-shadow:0 3px 14px rgba(0,0,0,.4)}.presets{display:flex;gap:8px;flex-wrap:wrap}.preset{border:1px solid var(--line);background:#102238;color:#dce7f4;border-radius:999px;padding:7px 11px;font-size:13px;font-weight:850}.preset.active{border-color:var(--earth);color:var(--earth)}.result{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line)}.result>div{padding:18px;text-align:center}.result>div+div{border-left:1px solid var(--line)}.result small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:10px;font-weight:900}.result b{display:block;font-size:30px;margin-top:4px}.result .trav b{color:var(--trav)}.result .gap b{color:var(--light)}
+.objection{padding:21px}.trip{display:grid;grid-template-columns:1fr 1fr;gap:14px}.trip-card{background:#091725;border:1px solid var(--line);border-radius:18px;padding:15px}.trip-card b{display:block;margin-bottom:4px}.trip-card p{margin:0;color:var(--muted);font-size:15px}.trip-line{height:74px;position:relative;margin:10px 0 2px}.trip-line .earth-line{position:absolute;left:10%;right:10%;top:35px;height:4px;border-radius:999px;background:var(--earth)}.trip-line .out,.trip-line .back{position:absolute;height:4px;border-radius:999px;background:var(--trav);width:43%;top:24px;transform-origin:left center}.trip-line .out{left:8%;transform:rotate(-12deg)}.trip-line .back{right:8%;transform-origin:right center;transform:rotate(12deg)}.turn{position:absolute;left:50%;top:5px;transform:translateX(-50%);font-size:11px;color:var(--light);font-weight:900;text-transform:uppercase;letter-spacing:.07em}
+.final{padding:28px 0 65px}.final-box{padding:26px 22px;text-align:center;border:1px solid #375977;border-radius:24px;background:linear-gradient(180deg,#10233a,#0a1727);box-shadow:var(--shadow)}.final-box h2{font-size:clamp(31px,5vw,47px);line-height:1.03;margin:0 0 10px}.final-box p{font-size:19px;color:#dce7f4;max-width:760px;margin:0 auto}.final-box strong{color:var(--light)}.footer{text-align:center;color:#71849b;font-size:12px;padding-bottom:34px}
+@media(max-width:720px){.wrap{width:min(100% - 22px,980px)}.hero{padding-top:42px}.section{padding:38px 0}.mechanism-grid{grid-template-columns:1fr}.logic{grid-template-columns:1fr}.arrow{transform:rotate(90deg);min-height:18px}.bodytop,.proc{grid-template-columns:105px 1fr 1fr}.proc-name{font-size:13px}.speedrow{flex-direction:column;align-items:flex-start}.result{grid-template-columns:1fr}.result>div+div{border-left:0;border-top:1px solid var(--line)}.trip{grid-template-columns:1fr}.event-map{padding:14px}.event-caption{font-size:17px;padding:0 14px 16px}.section-head p{font-size:17px}}
+@media(max-width:470px){.bodytop,.proc{grid-template-columns:88px 1fr 1fr;gap:7px}.proc-name{font-size:12px}.bodyboard{padding:14px}.mech-card{padding:12px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.pulse{display:none}}
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap"><span class="dot"></span>TIME DILATION · how can two people actually live different amounts of time?</div></header>
+<header class="top"><div class="wrap"><span class="mark"></span>TIME DILATION · HOW CAN THIS ACTUALLY HAPPEN?</div></header>
 <main class="wrap">
 <section class="hero">
-<div class="eyebrow">Start with people, not clocks</div>
-<h1>How can two people meet again and one has actually lived less time?</h1>
-<p>Scroll through the story. The graphics do the explaining; the text only fills in the gaps.</p>
-<div class="down">↓</div>
+  <div class="eyebrow">The question</div>
+  <h1>How can two people actually live different amounts of time?</h1>
+  <p>Forget the age difference for a minute. <strong>First, watch one flash of light.</strong> It shows why two people can disagree about how much time passed.</p>
 </section>
-<section class="story">
-<img class="art" src="assets/intro.jpg" alt="Two people begin together at the same age, one on Earth and one preparing to travel.">
-<div class="caption"><h2>At departure, nothing is different.</h2><p>They are together, the same age, and their lives are in sync.</p></div>
+
+<section class="section" id="events">
+  <div class="section-head"><div class="eyebrow">1 · Two meetings</div><h2>They leave together. They meet again later.</h2><p>The question is what can happen in between.</p></div>
+  <div class="panel event-map">
+    <svg viewBox="0 0 900 400" role="img" aria-label="Two paths between the same departure and reunion">
+      <defs><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+      <circle cx="110" cy="200" r="13" fill="#fff"/><circle cx="790" cy="200" r="13" fill="#fff"/>
+      <text x="110" y="240" fill="#a9b8ca" font-size="18" text-anchor="middle" font-weight="700">DEPARTURE</text>
+      <text x="790" y="240" fill="#a9b8ca" font-size="18" text-anchor="middle" font-weight="700">REUNION</text>
+      <path d="M110 165 C300 165 600 165 790 165" fill="none" stroke="#69d8ff" stroke-width="6" stroke-linecap="round"/>
+      <path d="M110 200 C280 60 620 60 790 200 C620 340 280 340 110 200" fill="none" stroke="#89f0b9" stroke-width="6" stroke-linecap="round"/>
+      <g fill="#69d8ff" filter="url(#glow)"><circle cx="180" cy="165" r="5"/><circle cx="245" cy="165" r="5"/><circle cx="310" cy="165" r="5"/><circle cx="375" cy="165" r="5"/><circle cx="440" cy="165" r="5"/><circle cx="505" cy="165" r="5"/><circle cx="570" cy="165" r="5"/><circle cx="635" cy="165" r="5"/><circle cx="700" cy="165" r="5"/></g>
+      <g fill="#89f0b9" filter="url(#glow)"><circle cx="235" cy="114" r="5"/><circle cx="360" cy="78" r="5"/><circle cx="505" cy="85" r="5"/><circle cx="650" cy="126" r="5"/><circle cx="650" cy="274" r="5"/><circle cx="505" cy="315" r="5"/><circle cx="360" cy="322" r="5"/><circle cx="235" cy="286" r="5"/></g>
+      <text x="450" y="145" fill="#69d8ff" font-size="19" text-anchor="middle" font-weight="800">EARTH PERSON</text>
+      <text x="450" y="365" fill="#89f0b9" font-size="19" text-anchor="middle" font-weight="800">TRAVELER</text>
+    </svg>
+    <div class="event-caption">Same departure. Same reunion. <span>The amount of time in between does not have to match.</span></div>
+  </div>
 </section>
-<section class="story">
-<img class="art" src="assets/journey.jpg" alt="Earth person's path and traveler's out-and-back path between the same departure and reunion.">
-<div class="caption"><h2>The important part is what happens between the two meetings.</h2><p>They begin together and later stand together again. <strong>The traveler can accumulate less lived time in between.</strong></p></div>
+
+<section class="section" id="why">
+  <div class="section-head"><div class="eyebrow">2 · Here is the reason</div><h2>Watch the same flash of light from two viewpoints.</h2><p>No clock trick. Just a flash leaving one place in the ship and reaching another.</p></div>
+  <div class="mechanism-grid">
+    <article class="mech-card">
+      <div class="mech-label"><b>Traveler inside the ship</b><span class="tag">ship looks still</span></div>
+      <svg class="diagram" id="travDiagram" viewBox="0 0 420 360" role="img" aria-label="Traveler sees a direct light path inside the ship">
+        <rect x="70" y="48" width="280" height="264" rx="28" fill="#0a1727" stroke="#385673" stroke-width="3"/>
+        <line x1="110" y1="86" x2="310" y2="86" stroke="#dce8f4" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="210" cy="278" r="10" fill="#ffd36f"/>
+        <circle cx="210" cy="86" r="7" fill="#f6f8fb"/>
+        <path id="travPath" d="M210 278 L210 86" fill="none" stroke="#ffd36f" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 10"/>
+        <circle id="travFlash" cx="210" cy="278" r="10" fill="#fff" stroke="#ffd36f" stroke-width="5"/>
+        <text x="210" y="334" fill="#a9b8ca" font-size="16" text-anchor="middle" font-weight="750">DIRECT PATH</text>
+      </svg>
+      <p class="micro">The ship is not moving relative to the traveler, so the flash goes straight across the cabin.</p>
+    </article>
+    <article class="mech-card">
+      <div class="mech-label"><b>Person on Earth</b><span class="tag">ship is moving</span></div>
+      <svg class="diagram" id="earthDiagram" viewBox="0 0 420 360" role="img" aria-label="Earth sees a longer diagonal light path because the ship moves">
+        <rect x="28" y="82" width="150" height="212" rx="22" fill="none" stroke="#29445f" stroke-width="2" stroke-dasharray="7 8"/>
+        <rect x="242" y="48" width="150" height="212" rx="22" fill="#0a1727" stroke="#385673" stroke-width="3"/>
+        <line x1="272" y1="86" x2="362" y2="86" stroke="#dce8f4" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="103" cy="278" r="10" fill="#ffd36f"/>
+        <circle cx="317" cy="86" r="7" fill="#f6f8fb"/>
+        <path id="earthPath" d="M103 278 L317 86" fill="none" stroke="#ffd36f" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 10"/>
+        <circle id="earthFlash" cx="103" cy="278" r="10" fill="#fff" stroke="#ffd36f" stroke-width="5"/>
+        <path d="M90 320 H330" stroke="#69d8ff" stroke-width="3" marker-end="url(#arr)"/>
+        <defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#69d8ff"/></marker></defs>
+        <text x="210" y="344" fill="#a9b8ca" font-size="16" text-anchor="middle" font-weight="750">LONGER DIAGONAL PATH</text>
+      </svg>
+      <p class="micro">From Earth, the ship slides sideways while the flash is moving. The same flash has farther to travel.</p>
+    </article>
+  </div>
+  <div class="runbar"><button class="run" id="runFlash">▶ Run both flashes</button></div>
+  <div class="logic" aria-label="Cause and effect of time dilation">
+    <div class="logic-card"><div><div class="logic-icon"><svg width="54" height="42" viewBox="0 0 54 42"><path d="M3 21h10l5-11 8 22 7-18 6 14h12" fill="none" stroke="#ffd36f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div><b>Light speed is the same</b><small>for both people</small></div></div>
+    <div class="arrow">→</div>
+    <div class="logic-card"><div><div class="logic-icon"><svg width="54" height="42" viewBox="0 0 54 42"><path d="M6 35L46 7" stroke="#89f0b9" stroke-width="4" stroke-linecap="round"/><path d="M8 33V9" stroke="#426782" stroke-width="3" stroke-linecap="round"/></svg></div><b>Earth sees a longer path</b><small>because the ship moves</small></div></div>
+    <div class="arrow">→</div>
+    <div class="logic-card"><div><div class="logic-icon"><svg width="64" height="42" viewBox="0 0 64 42"><rect x="3" y="9" width="20" height="24" rx="6" fill="#17304b" stroke="#6d8baa"/><rect x="29" y="9" width="32" height="24" rx="6" fill="#2a2530" stroke="#ffd36f"/><path d="M9 21h8M35 21h20" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg></div><b>More time between the events</b><small>in Earth's measurement</small></div></div>
+  </div>
+  <p class="note"><strong>The light does not cause the effect.</strong> It exposes the rule. Light's speed refuses to change, so measurements of space and time have to.</p>
 </section>
-<section class="try">
-<div class="control">
-<div class="control-head"><div class="eyebrow">Try the numbers</div><h2>Change only the travel speed.</h2><p>Assume 30 years pass on Earth before they reunite. The brief turnaround is ignored here so the speed effect stays easy to see.</p></div>
-<div class="slider-wrap"><div class="speed-line"><b>Traveler speed</b><span id="speedText">90% of light speed</span></div><input id="speed" type="range" min="0" max="99.9" value="90" step="0.1"><div class="presets"><button class="preset" data-v="0">0%</button><button class="preset" data-v="50">50%</button><button class="preset active" data-v="90">90%</button><button class="preset" data-v="99">99%</button><button class="preset" data-v="99.9">99.9%</button></div></div>
-<div class="ages"><div class="agebox"><small>Earth person at reunion</small><b>60.0</b></div><div class="agebox trav"><small>Traveler at reunion</small><b id="travAge">43.1</b></div><div class="agebox gap"><small>Life difference</small><b id="gap">16.9 years</b></div></div>
-</div>
+
+<section class="section" id="body">
+  <div class="section-head"><div class="eyebrow">3 · Why this affects a person</div><h2>Your body is made of physical processes too.</h2><p>If less time elapses for the traveler before reunion, fewer cycles of every physical process occur.</p></div>
+  <div class="panel bodyboard">
+    <div class="bodytop"><div></div><div>Earth</div><div>Traveler</div></div>
+    <div class="proc"><div class="proc-name">Heartbeats</div><div class="strip"><div class="marks earthmarks"></div></div><div class="strip"><div class="travwrap dynamicWidth"><div class="travmarks"></div></div></div></div>
+    <div class="proc"><div class="proc-name">Breaths</div><div class="strip"><div class="marks earthmarks"></div></div><div class="strip"><div class="travwrap dynamicWidth"><div class="travmarks"></div></div></div></div>
+    <div class="proc"><div class="proc-name">Brain activity</div><div class="strip"><div class="marks earthmarks"></div></div><div class="strip"><div class="travwrap dynamicWidth"><div class="travmarks"></div></div></div></div>
+    <div class="proc"><div class="proc-name">Chemistry</div><div class="strip"><div class="marks earthmarks"></div></div><div class="strip"><div class="travwrap dynamicWidth"><div class="travmarks"></div></div></div></div>
+    <div class="proc"><div class="proc-name">Cell processes</div><div class="strip"><div class="marks earthmarks"></div></div><div class="strip"><div class="travwrap dynamicWidth"><div class="travmarks"></div></div></div></div>
+    <div class="local-normal"><strong>The traveler does not feel slowed down.</strong> Their heartbeat, thoughts, movement, and chemistry all stay normal relative to each other.</div>
+  </div>
 </section>
-<section class="section">
-<div class="section-head"><div class="eyebrow">So how can that physically happen?</div><h2>Use one flash of light, not a clock.</h2><p>Imagine a flash leaving one point in the ship and reaching another. Those are just two real physical events.</p></div>
-<div class="mechanism">
-<article class="shot"><img src="assets/mechanism-traveler.jpg" alt="Inside the moving ship, a traveler sees a light flash travel directly across the cabin."><div class="shot-copy"><b>Inside the ship</b><p>The traveler sees the flash take the direct path between the two events.</p></div></article>
-<article class="shot"><img src="assets/mechanism-earth.jpg" alt="From Earth, the ship moves while the light flash travels, making the light follow a longer diagonal path."><div class="shot-copy"><b>From Earth</b><p>The ship moves while the flash is in flight, so those same two events are separated by a longer path.</p></div></article>
-</div>
-<div class="rule"><strong>Light has the same measured speed for both people.</strong> So if they disagree about the distance between those events, they cannot also agree about how much time passed between them. Space and time have to adjust together.</div>
-<p class="clarify">The light does not make the traveler age differently. It reveals the deeper rule: the amount of elapsed time itself depends on the path a person takes through spacetime.</p>
+
+<section class="section" id="try">
+  <div class="section-head"><div class="eyebrow">4 · Now look at the age difference</div><h2>The age gap is the result, not the explanation.</h2><p>Change the travel speed. Assume 30 years pass on Earth before they meet again.</p></div>
+  <div class="panel try">
+    <div class="controls">
+      <div class="speedrow"><b>Traveler speed</b><span class="speedval" id="speedVal">90% of light speed</span></div>
+      <input id="speed" type="range" min="0" max="99.9" value="90" step="0.1">
+      <div class="presets"><button class="preset" data-v="0">0%</button><button class="preset" data-v="50">50%</button><button class="preset active" data-v="90">90%</button><button class="preset" data-v="99">99%</button><button class="preset" data-v="99.9">99.9%</button></div>
+    </div>
+    <div class="result"><div><small>Earth experiences</small><b>30.0 years</b></div><div class="trav"><small>Traveler experiences</small><b id="travYears">13.1 years</b></div><div class="gap"><small>Difference</small><b id="gapYears">16.9 years</b></div></div>
+  </div>
 </section>
-<section class="story">
-<img class="art" src="assets/reunion.jpg" alt="The two people reunite with different ages and different totals of physical life processes.">
-<div class="caption"><h2>This is why the person is younger, not just their watch.</h2><p>Aging is physical change: heartbeats, brain activity, chemistry, cell division. <strong>If less time elapses along the traveler's path, less of all of it happens before reunion.</strong></p></div>
+
+<section class="section" id="symmetry">
+  <div class="section-head"><div class="eyebrow">5 · One obvious objection</div><h2>Why doesn't the traveler say Earth should be younger?</h2><p>For the full round trip, the two trips are not equivalent.</p></div>
+  <div class="panel objection">
+    <div class="trip">
+      <div class="trip-card"><b>Earth person</b><div class="trip-line"><div class="earth-line"></div></div><p>One continuous trip from departure to reunion.</p></div>
+      <div class="trip-card"><b>Traveler</b><div class="trip-line"><div class="out"></div><div class="back"></div><div class="turn">turns around</div></div><p>Leaves, changes direction, and comes back. That makes the complete trip different.</p></div>
+    </div>
+  </div>
 </section>
-<section class="takeaway"><div class="take"><div class="eyebrow">The mental shift</div><h2>There is no single universe-wide amount of time that everyone must accumulate.</h2><p>Each person experiences their own life normally. When their paths separate and later reconnect, their totals can be different. <em>That is time dilation.</em></p></div></section>
-<section class="more">
-<details><summary>Would the traveler feel slowed down?</summary><p>No. Heartbeats, thoughts, chemistry, movement, and every other local process remain normal relative to one another. Nothing inside the traveler announces that “less time” is passing.</p></details>
-<details><summary>If motion is relative, why doesn't the traveler say Earth should be younger?</summary><p>During steady motion each can describe the other's processes as slower. The complete round trip is different because the traveler turns around and changes motion. Once they reunite side by side, both agree on how much time each person actually experienced.</p></details>
+
+<section class="final">
+  <div class="final-box"><h2>So how can one person actually live less time?</h2><p>Because motion changes how much elapsed time fits between events. Light shows us that this has to be true. A person's body follows that same elapsed time, so <strong>less time means less physical change and less aging before reunion.</strong></p></div>
 </section>
-<div class="footer">Conceptual illustrations. Numerical values use the special-relativity time-dilation equation.</div>
+<div class="footer">No clocks are used as the explanation. The light-flash diagrams show the same two physical events from two viewpoints.</div>
 </main>
 <script>
-const slider=document.getElementById('speed'); const speedText=document.getElementById('speedText'); const travAge=document.getElementById('travAge'); const gap=document.getElementById('gap'); const presets=[...document.querySelectorAll('.preset')];
-function update(){const p=+slider.value,b=p/100,elapsed=30*Math.sqrt(1-b*b),age=30+elapsed,diff=30-elapsed;speedText.textContent=(p%1===0?p.toFixed(0):p.toFixed(1))+'% of light speed';travAge.textContent=age.toFixed(1);gap.textContent=diff.toFixed(1)+' years';presets.forEach(x=>x.classList.toggle('active',Math.abs(+x.dataset.v-p)<.05));}
-slider.addEventListener('input',update);presets.forEach(x=>x.addEventListener('click',()=>{slider.value=x.dataset.v;update()}));update();
+const speed=document.getElementById('speed');
+const speedVal=document.getElementById('speedVal');
+const travYears=document.getElementById('travYears');
+const gapYears=document.getElementById('gapYears');
+const presets=[...document.querySelectorAll('.preset')];
+const dynamic=[...document.querySelectorAll('.dynamicWidth')];
+function update(){
+  const p=+speed.value,b=p/100,ratio=Math.sqrt(1-b*b),t=30*ratio,g=30-t;
+  speedVal.textContent=(p%1===0?p.toFixed(0):p.toFixed(1))+'% of light speed';
+  travYears.textContent=t.toFixed(1)+' years'; gapYears.textContent=g.toFixed(1)+' years';
+  dynamic.forEach(el=>el.style.width=(ratio*100).toFixed(2)+'%');
+  presets.forEach(x=>x.classList.toggle('active',Math.abs(+x.dataset.v-p)<.05));
+}
+speed.addEventListener('input',update);presets.forEach(x=>x.addEventListener('click',()=>{speed.value=x.dataset.v;update()}));update();
+const travFlash=document.getElementById('travFlash'),earthFlash=document.getElementById('earthFlash');
+const travPath=document.getElementById('travPath'),earthPath=document.getElementById('earthPath');
+function animateAlong(circle,path,duration){
+  const len=path.getTotalLength(),start=performance.now();
+  function frame(now){const q=Math.min(1,(now-start)/duration),pt=path.getPointAtLength(len*q);circle.setAttribute('cx',pt.x);circle.setAttribute('cy',pt.y);if(q<1)requestAnimationFrame(frame)}
+  requestAnimationFrame(frame);
+}
+document.getElementById('runFlash').addEventListener('click',()=>{
+  travFlash.setAttribute('cx',210);travFlash.setAttribute('cy',278);earthFlash.setAttribute('cx',103);earthFlash.setAttribute('cy',278);
+  animateAlong(travFlash,travPath,1400);animateAlong(earthFlash,earthPath,2200);
+});
 </script>
-</body></html>
+</body>
+</html>
