@@ -3,133 +3,193 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07101f">
-<title>How Can Time Run Differently?</title>
+<meta name="theme-color" content="#07111f">
+<title>How Can Two People Experience Different Amounts of Time?</title>
 <style>
-:root{--bg:#07101f;--panel:#0d1830;--panel2:#091427;--ink:#f7f9ff;--muted:#aab9d2;--line:#29405f;--blue:#75ddff;--green:#b8ffd0;--gold:#ffd37a;--red:#ff958f}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 5%,rgba(55,117,255,.18),transparent 30%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);min-height:100vh}.wrap{width:min(900px,calc(100% - 24px));margin:auto}.brand{padding:16px 2px 8px;font-size:15px;font-weight:850;color:#dfe9f8}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--blue);box-shadow:0 0 16px var(--blue);margin-right:8px}.hero{padding:14px 0 16px;text-align:center}.hero h1{font-size:clamp(34px,6vw,60px);line-height:1.02;letter-spacing:-.04em;margin:6px auto 10px;max-width:780px}.hero p{margin:0;color:var(--muted);font-size:18px}.walk{background:linear-gradient(180deg,rgba(16,29,55,.98),rgba(8,17,33,.98));border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 25px 70px rgba(0,0,0,.25)}.progress{display:flex;justify-content:center;gap:8px;padding:14px 12px 8px}.progress button{width:9px;height:9px;border:0;border-radius:99px;background:#314462;padding:0;transition:.2s}.progress button.active{width:28px;background:var(--blue)}.stage{padding:6px 12px 12px}.frame{display:none}.frame.active{display:block}.visual{display:block;width:100%;height:auto;max-height:58vh;border-radius:18px;background:#060e1c;border:1px solid #213654}.caption{min-height:72px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 12px 8px;font-size:clamp(19px,3vw,26px);font-weight:850;line-height:1.22}.caption .blue{color:var(--blue)}.caption .green{color:var(--green)}.caption .gold{color:var(--gold)}.nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 12px 14px}.nav button{border:1px solid #38547a;border-radius:15px;background:#10213e;color:var(--ink);font:inherit;font-weight:850;padding:14px 12px;min-height:50px}.nav button.primary{background:var(--blue);color:#06111f;border-color:var(--blue)}.nav button:disabled{opacity:.35}.small{font-size:13px;color:var(--muted);text-align:center;padding:0 14px 14px}.try{margin:22px 0 30px;background:linear-gradient(180deg,#0e1b34,#0a1528);border:1px solid var(--line);border-radius:22px;padding:18px}.try h2{font-size:24px;margin:0 0 4px}.try p{margin:0 0 14px;color:var(--muted)}.range-row{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.range-row b{font-size:22px;color:var(--blue);font-variant-numeric:tabular-nums}input[type=range]{width:100%;height:40px;background:transparent;accent-color:var(--blue);touch-action:pan-y}input[type=range]::-webkit-slider-runnable-track{height:8px;background:#213859;border-radius:999px}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:#fff;border:4px solid var(--blue)}.tick-compare{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.tick-card{background:#081222;border:1px solid #263c5b;border-radius:16px;padding:13px}.tick-title{font-size:13px;font-weight:800;color:var(--muted);margin-bottom:8px}.ticks{display:flex;align-items:center;gap:6px;min-height:26px;flex-wrap:wrap}.tick{width:8px;height:24px;border-radius:4px;background:var(--blue)}.tick.trav{background:var(--green)}.result{margin-top:14px;text-align:center;font-weight:850;font-size:18px}.result span{color:var(--gold)}details{margin:14px 0 36px;border:1px solid var(--line);background:#0a1528;border-radius:16px;padding:14px 16px}summary{font-weight:850;cursor:pointer}details p{color:var(--muted);line-height:1.55;margin:10px 0 0}.footer{color:#7184a1;font-size:12px;text-align:center;padding-bottom:28px}
-@media(max-width:560px){.wrap{width:min(100% - 16px,900px)}.brand{padding-left:4px}.hero{padding-top:8px}.hero h1{font-size:38px}.hero p{font-size:16px}.stage{padding:4px 8px 8px}.caption{min-height:76px;font-size:21px;padding:12px 8px 6px}.nav{padding:0 8px 10px}.visual{max-height:none}.try{padding:14px}.tick-compare{grid-template-columns:1fr}}
+:root{--bg:#07111f;--panel:#0d1a2d;--panel2:#091423;--ink:#f7f9ff;--muted:#aab8cc;--line:#253a58;--cyan:#6fe1ff;--green:#9dffc4;--gold:#ffd477;--pink:#ff8eb8;--blue:#8db8ff;--red:#ff6d7f;--shadow:0 22px 60px rgba(0,0,0,.32)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 0,rgba(67,111,255,.17),transparent 27%),radial-gradient(circle at 90% 24%,rgba(111,225,255,.08),transparent 24%),var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+.wrap{width:min(960px,calc(100% - 28px));margin:auto}.topbar{padding:16px 0 8px;font-size:14px;font-weight:850;color:#dfeaff}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan);margin-right:8px}.hero{min-height:74vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:28px 0 38px}.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:var(--cyan)}h1{font-size:clamp(40px,7vw,70px);line-height:1.01;letter-spacing:-.045em;margin:12px auto 14px;max-width:850px}.hero p{max-width:670px;margin:0 auto;color:var(--muted);font-size:clamp(18px,2.4vw,22px)}.start-pill{margin-top:26px;padding:11px 16px;border-radius:999px;border:1px solid var(--line);background:#0d1a2d;color:#dfeaff;font-weight:800;font-size:14px}.scene{min-height:86vh;display:flex;flex-direction:column;justify-content:center;padding:46px 0}.scene-head{text-align:center;max-width:720px;margin:0 auto 20px}.scene-num{font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:900;color:var(--cyan)}h2{font-size:clamp(30px,4.5vw,46px);line-height:1.05;letter-spacing:-.035em;margin:7px 0 8px}.one-line{font-size:clamp(17px,2.2vw,21px);color:var(--muted);margin:0 auto;max-width:680px}.panel{border:1px solid var(--line);background:linear-gradient(180deg,rgba(16,30,52,.98),rgba(8,17,31,.98));border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.visual{padding:20px}.caption{margin:14px 0 0;padding:14px 16px;border-radius:17px;background:#102039;border:1px solid #304a70;text-align:center;font-size:17px;color:#e5edf8}.caption strong{color:var(--gold)}
+/* people */
+.people-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:10px}.person-card{position:relative;min-height:330px;border:1px solid var(--line);background:radial-gradient(circle at 50% 35%,rgba(111,225,255,.09),transparent 42%),var(--panel2);border-radius:22px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px}.person-name{font-weight:900;font-size:17px;margin-top:10px}.age{font-size:32px;font-weight:950;letter-spacing:-.03em;margin-top:2px}.human{position:relative;width:104px;height:165px;margin:4px auto 0}.head{position:absolute;width:48px;height:48px;border-radius:50%;left:28px;top:0;background:linear-gradient(180deg,#dce8ff,#9fb7d8)}.body{position:absolute;width:62px;height:75px;border-radius:26px 26px 18px 18px;left:21px;top:49px;background:linear-gradient(180deg,#79dfff,#3984cf)}.arm{position:absolute;width:18px;height:70px;border-radius:12px;background:#64bfe5;top:55px;transform-origin:9px 8px}.arm.l{left:10px;transform:rotate(20deg)}.arm.r{right:10px;transform:rotate(-20deg)}.leg{position:absolute;width:20px;height:62px;border-radius:10px;background:#3d7db9;top:112px}.leg.l{left:27px;transform:rotate(4deg)}.leg.r{right:27px;transform:rotate(-4deg)}.heart{position:absolute;left:43px;top:72px;width:18px;height:18px;background:var(--pink);transform:rotate(45deg);animation:beat 1.05s infinite}.heart:before,.heart:after{content:"";position:absolute;width:18px;height:18px;background:var(--pink);border-radius:50%}.heart:before{left:-9px}.heart:after{top:-9px}@keyframes beat{0%,100%{transform:rotate(45deg) scale(.9)}20%{transform:rotate(45deg) scale(1.22)}35%{transform:rotate(45deg) scale(.95)}}.pulse-line{display:flex;gap:6px;margin-top:15px;min-height:16px;align-items:center}.pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 10px rgba(157,255,196,.35)}
+/* shared event strip */
+.shared-strip{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin-top:12px}.shared-line{height:2px;background:linear-gradient(90deg,transparent,var(--line))}.shared-line.r{background:linear-gradient(90deg,var(--line),transparent)}.shared-label{padding:8px 12px;border-radius:999px;background:#14253e;border:1px solid #355171;font-size:13px;font-weight:850;color:#eaf1fb}
+/* speed */
+.controlbar{padding:18px;border-bottom:1px solid var(--line);background:#0a1627}.speed-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-end}.speed-top b{font-size:17px}.speed-value{font-size:24px;font-weight:950;color:var(--green);font-variant-numeric:tabular-nums}input[type=range]{width:100%;height:42px;background:transparent;accent-color:var(--cyan);touch-action:pan-y;margin:8px 0 0}input[type=range]::-webkit-slider-runnable-track{height:8px;background:#213959;border-radius:999px}input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:30px;height:30px;margin-top:-11px;border-radius:50%;background:#fff;border:4px solid var(--cyan);box-shadow:0 4px 15px rgba(0,0,0,.35)}.presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}.preset{border:1px solid var(--line);background:#10203a;color:#dce7f6;border-radius:999px;padding:7px 11px;font-weight:850;font-size:13px}.preset.active{border-color:var(--cyan);color:var(--cyan)}
+/* worldline */
+.world-wrap{padding:18px}.world-svg{display:block;width:100%;height:auto;border-radius:20px;background:#07111f;border:1px solid var(--line)}.legend{display:flex;justify-content:center;gap:18px;margin-top:10px;color:var(--muted);font-size:13px;font-weight:800}.legend span:before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px}.legend .earth:before{background:var(--cyan)}.legend .trav:before{background:var(--green)}
+/* life processes */
+.process-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.process{padding:18px;border:1px solid var(--line);border-radius:20px;background:var(--panel2)}.process-title{display:flex;align-items:center;gap:9px;font-weight:900;margin-bottom:14px}.icon{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:#14263e;font-size:19px}.bar-label{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);font-weight:800;margin-top:10px}.bar{height:13px;border-radius:999px;background:#182a45;overflow:hidden;margin-top:5px}.bar .fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--green),var(--cyan));transition:width .25s ease}.earth-fill{width:100%!important;background:linear-gradient(90deg,var(--cyan),var(--blue))!important}.ratio-badge{text-align:center;margin-top:18px;padding:14px;border-radius:16px;background:#10203a;border:1px solid #304a70;font-size:20px;font-weight:950;color:var(--gold)}
+/* light event visual */
+.flash-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.flash-card{position:relative;min-height:350px;border:1px solid var(--line);border-radius:20px;background:#07111f;overflow:hidden;padding:15px}.flash-title{text-align:center;font-size:13px;font-weight:900;color:#dfeaff;letter-spacing:.04em}.cabin{position:absolute;left:17%;right:17%;top:72px;bottom:52px;border:2px solid #506883;border-radius:18px;background:linear-gradient(180deg,rgba(41,68,102,.18),rgba(8,17,31,.08))}.ceiling{position:absolute;height:8px;border-radius:999px;background:#d8e4f2;top:28px;left:25%;right:25%}.mini-person{position:absolute;width:42px;height:72px;left:calc(50% - 21px);bottom:24px}.mini-person .mh{position:absolute;width:20px;height:20px;border-radius:50%;left:11px;background:#dce8ff}.mini-person .mb{position:absolute;width:28px;height:42px;border-radius:13px 13px 8px 8px;left:7px;top:21px;background:#6bcfff}.flash-start{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 18px var(--gold);left:calc(50% - 6px);bottom:100px}.light-path{position:absolute;height:3px;transform-origin:left center;background:repeating-linear-gradient(90deg,var(--gold) 0 9px,transparent 9px 15px)}.vertical-path{left:50%;bottom:111px;width:147px;transform:rotate(-90deg)}.diagonal-path{left:31%;bottom:111px;width:205px;transform:rotate(-58deg)}.ghost-start,.ghost-end{position:absolute;border:1px dashed #3c587b;border-radius:15px;top:86px;bottom:63px;width:120px}.ghost-start{left:12%}.ghost-end{right:8%}.moving-person{left:27%}.arrow{position:absolute;right:18px;top:48%;font-size:28px;color:var(--cyan);font-weight:900}.formula-strip{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}.formula-chip{padding:9px 12px;border-radius:14px;border:1px solid var(--line);background:#10203a;font-weight:900}.plus,.equals{color:var(--muted);font-weight:950}.formula-result{border-color:#5b5638;color:var(--gold)}
+/* local normal */
+.normal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.normal-card{padding:18px;text-align:center;border:1px solid var(--line);border-radius:20px;background:var(--panel2)}.normal-card .human{transform:scale(.78);margin:-8px auto -8px}.normal-list{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:10px}.normal-pill{padding:7px 9px;border-radius:999px;background:#12243d;border:1px solid #2b4568;color:#dce8f8;font-weight:800;font-size:12px}.normal-big{font-size:22px;font-weight:950;color:var(--green);margin-top:8px}
+/* reunion */
+.reunion{padding:24px}.reunion-stage{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:end}.reunion-person{text-align:center}.reunion-person .human{transform:scale(.9);margin-bottom:-6px}.reunion-age{font-size:38px;font-weight:950;letter-spacing:-.03em}.reunion-label{font-size:14px;color:var(--muted);font-weight:850}.vs{align-self:center;color:#7186a3;font-weight:900}.gap-card{margin-top:18px;text-align:center;padding:17px;border-radius:18px;background:#10203a;border:1px solid #3a536f}.gap-card span{display:block;color:var(--muted);font-size:13px;font-weight:800}.gap-card b{display:block;color:var(--gold);font-size:30px;margin-top:2px}
+/* final model */
+.final-visual{display:grid;grid-template-columns:1fr 1fr;gap:14px}.model-card{min-height:250px;border:1px solid var(--line);border-radius:20px;background:var(--panel2);padding:20px;text-align:center}.model-card.bad{opacity:.72}.river{height:120px;position:relative;margin:18px 0}.river:before{content:"";position:absolute;left:12%;right:12%;top:53px;height:18px;border-radius:999px;background:linear-gradient(90deg,#5fa0ff,#78dfff)}.river:after{content:"×";position:absolute;inset:0;display:grid;place-items:center;font-size:95px;line-height:1;color:rgba(255,109,127,.9);font-weight:300}.paths{height:120px;position:relative;margin:18px 0}.paths .p1,.paths .p2{position:absolute;left:14%;right:14%;height:6px;border-radius:999px}.paths .p1{top:38px;background:var(--cyan)}.paths .p2{top:78px;background:var(--green)}.paths .p1:before,.paths .p2:before{content:"";position:absolute;left:0;right:0;top:-5px;height:16px;background:repeating-linear-gradient(90deg,transparent 0 23px,currentColor 23px 27px,transparent 27px 37px);color:inherit}.model-title{font-size:18px;font-weight:950}.model-note{color:var(--muted);font-size:14px;margin-top:4px}.final-line{text-align:center;font-size:clamp(25px,4vw,38px);font-weight:950;line-height:1.1;margin:22px auto 0;max-width:760px}.final-line span{color:var(--gold)}
+.more{padding:0 0 60px}.more details{border:1px solid var(--line);background:#0b1829;border-radius:18px;padding:15px 17px}.more summary{font-weight:900;cursor:pointer}.more p{color:var(--muted);margin:10px 0 0}.footer{text-align:center;color:#7f91aa;font-size:12px;padding:0 0 35px}
+@media(max-width:720px){.hero{min-height:70vh}.scene{min-height:auto;padding:48px 0}.people-row,.flash-grid,.normal-grid,.process-grid,.final-visual{grid-template-columns:1fr}.person-card{min-height:285px}.flash-card{min-height:315px}.flash-grid .flash-card+ .flash-card{margin-top:0}.reunion-stage{grid-template-columns:1fr 1fr}.vs{display:none}.controlbar{padding:15px}.speed-top{align-items:flex-start;flex-direction:column}.world-wrap{padding:12px}.visual{padding:14px}.caption{font-size:16px}.legend{gap:12px;flex-wrap:wrap}.shared-strip{margin-bottom:2px}}
+@media(max-width:430px){h1{font-size:42px}.reunion-age{font-size:31px}.formula-strip{gap:6px}.formula-chip{font-size:13px;padding:8px 9px}.person-card{min-height:270px}.flash-card{min-height:300px}.world-svg text{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.heart{animation:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
-<div class="brand"><span class="dot"></span>How can time run differently?</div>
+<div class="topbar"><span class="dot"></span>Time dilation, explained with people</div>
+
 <header class="hero">
-<h1>How can your time and my time pass at different rates?</h1>
-<p>Tap through the pictures. Six steps.</p>
+<div class="kicker">The actual question</div>
+<h1>How can two people meet again and one has literally lived less time?</h1>
+<p>Not a weird clock. Not a feeling. <strong style="color:#fff">A real difference in how much life happened.</strong></p>
+<div class="start-pill">Start with them together ↓</div>
 </header>
 
-<div class="walk">
-<div class="progress" id="progress"></div>
-<div class="stage">
-
-<div class="frame active" data-step="0">
-<svg class="visual" viewBox="0 0 720 470" role="img" aria-label="Two people together with matching clocks">
-<defs><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-<text x="360" y="42" text-anchor="middle" fill="#aab9d2" font-size="20" font-weight="700">START TOGETHER</text>
-<circle cx="225" cy="180" r="55" fill="#0d2441" stroke="#75ddff" stroke-width="4"/><circle cx="495" cy="180" r="55" fill="#10283d" stroke="#b8ffd0" stroke-width="4"/>
-<circle cx="225" cy="165" r="17" fill="#75ddff"/><path d="M190 225 Q225 190 260 225" fill="none" stroke="#75ddff" stroke-width="12" stroke-linecap="round"/>
-<circle cx="495" cy="165" r="17" fill="#b8ffd0"/><path d="M460 225 Q495 190 530 225" fill="none" stroke="#b8ffd0" stroke-width="12" stroke-linecap="round"/>
-<g transform="translate(145,280)"><circle cx="80" cy="70" r="62" fill="#081222" stroke="#75ddff" stroke-width="4"/><line x1="80" y1="70" x2="80" y2="30" stroke="#fff" stroke-width="5" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 80 70" to="360 80 70" dur="6s" repeatCount="indefinite"/></line><circle cx="80" cy="70" r="6" fill="#fff"/><text x="80" y="150" text-anchor="middle" fill="#75ddff" font-size="18" font-weight="800">YOUR CLOCK</text></g>
-<g transform="translate(415,280)"><circle cx="80" cy="70" r="62" fill="#081222" stroke="#b8ffd0" stroke-width="4"/><line x1="80" y1="70" x2="80" y2="30" stroke="#fff" stroke-width="5" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 80 70" to="360 80 70" dur="6s" repeatCount="indefinite"/></line><circle cx="80" cy="70" r="6" fill="#fff"/><text x="80" y="150" text-anchor="middle" fill="#b8ffd0" font-size="18" font-weight="800">MY CLOCK</text></g>
-<line x1="310" y1="350" x2="410" y2="350" stroke="#ffd37a" stroke-width="4" stroke-dasharray="10 10"/>
-<text x="360" y="390" text-anchor="middle" fill="#ffd37a" font-size="22" font-weight="900">MATCH</text>
-</svg>
-<div class="caption">Together, <span class="blue">your seconds</span>&nbsp;and&nbsp;<span class="green">my seconds</span>&nbsp;match.</div>
+<section class="scene" id="together">
+<div class="scene-head"><div class="scene-num">1 · Together</div><h2>At the start, their lives match.</h2><p class="one-line">Same age. Same place. Their bodies are going through time together.</p></div>
+<div class="panel visual">
+<div class="people-row">
+<div class="person-card">
+<div class="human"><div class="head"></div><div class="body"></div><div class="arm l"></div><div class="arm r"></div><div class="leg l"></div><div class="leg r"></div><div class="heart"></div></div>
+<div class="person-name">Person on Earth</div><div class="age">Age 30</div><div class="pulse-line" id="startEarthPulses"></div>
 </div>
-
-<div class="frame" data-step="1">
-<svg class="visual" viewBox="0 0 720 470" role="img" aria-label="One person stays and one moves quickly">
-<text x="360" y="42" text-anchor="middle" fill="#aab9d2" font-size="20" font-weight="700">THEN I MOVE VERY FAST</text>
-<circle cx="145" cy="195" r="54" fill="#0d2441" stroke="#75ddff" stroke-width="4"/><circle cx="145" cy="180" r="17" fill="#75ddff"/><path d="M110 240 Q145 205 180 240" fill="none" stroke="#75ddff" stroke-width="12" stroke-linecap="round"/><text x="145" y="285" text-anchor="middle" fill="#75ddff" font-size="18" font-weight="800">YOU STAY</text>
-<g id="ship"><path d="M395 150 L565 195 L395 240 Q365 195 395 150Z" fill="#10283d" stroke="#b8ffd0" stroke-width="4"/><circle cx="455" cy="195" r="30" fill="#081222" stroke="#b8ffd0" stroke-width="3"/><circle cx="455" cy="187" r="10" fill="#b8ffd0"/><path d="M435 220 Q455 202 475 220" fill="none" stroke="#b8ffd0" stroke-width="7" stroke-linecap="round"/><path d="M565 180 l60 15 -60 15" fill="#ffd37a" opacity=".9"><animate attributeName="opacity" values=".25;1;.25" dur=".8s" repeatCount="indefinite"/></path><animateTransform attributeName="transform" type="translate" values="-18 0;18 0;-18 0" dur="2.2s" repeatCount="indefinite"/></g>
-<line x1="350" y1="115" x2="650" y2="115" stroke="#75ddff" stroke-width="3" stroke-dasharray="14 15" opacity=".45"/><line x1="330" y1="280" x2="630" y2="280" stroke="#75ddff" stroke-width="3" stroke-dasharray="14 15" opacity=".3"/>
-<g transform="translate(85,320)"><rect x="0" y="0" width="120" height="90" rx="14" fill="#081222" stroke="#29405f"/><circle cx="60" cy="45" r="12" fill="#ffd37a"><animate attributeName="cy" values="68;22;68" dur="1.4s" repeatCount="indefinite"/></circle><line x1="60" y1="18" x2="60" y2="72" stroke="#506889" stroke-width="2"/></g>
-<g transform="translate(435,320)"><rect x="0" y="0" width="120" height="90" rx="14" fill="#081222" stroke="#29405f"/><circle cx="60" cy="45" r="12" fill="#ffd37a"><animate attributeName="cy" values="68;22;68" dur="1.4s" repeatCount="indefinite"/></circle><line x1="60" y1="18" x2="60" y2="72" stroke="#506889" stroke-width="2"/></g>
-<text x="145" y="438" text-anchor="middle" fill="#aab9d2" font-size="16">inside your clock</text><text x="495" y="438" text-anchor="middle" fill="#aab9d2" font-size="16">inside my clock</text>
-</svg>
-<div class="caption">Inside each clock, a light pulse bounces. <span class="gold">Light always moves at the same speed.</span></div>
+<div class="person-card">
+<div class="human"><div class="head"></div><div class="body" style="background:linear-gradient(180deg,#b9ffd0,#50aa77)"></div><div class="arm l" style="background:#86dba5"></div><div class="arm r" style="background:#86dba5"></div><div class="leg l" style="background:#478f66"></div><div class="leg r" style="background:#478f66"></div><div class="heart"></div></div>
+<div class="person-name">Traveler</div><div class="age">Age 30</div><div class="pulse-line" id="startTravPulses"></div>
 </div>
-
-<div class="frame" data-step="2">
-<svg class="visual" viewBox="0 0 720 470" role="img" aria-label="Straight light path compared with diagonal moving light path">
-<text x="180" y="42" text-anchor="middle" fill="#75ddff" font-size="20" font-weight="900">YOUR VIEW</text><text x="540" y="42" text-anchor="middle" fill="#b8ffd0" font-size="20" font-weight="900">MY MOVING CLOCK</text>
-<line x1="360" y1="60" x2="360" y2="430" stroke="#29405f"/>
-<rect x="110" y="90" width="140" height="10" rx="5" fill="#fff"/><rect x="110" y="340" width="140" height="10" rx="5" fill="#fff"/><line x1="180" y1="340" x2="180" y2="100" stroke="#75ddff" stroke-width="6"/><circle cx="180" cy="220" r="12" fill="#ffd37a" filter="url(#glow)"><animate attributeName="cy" values="340;100;340" dur="2s" repeatCount="indefinite"/></circle><text x="180" y="390" text-anchor="middle" fill="#75ddff" font-size="20" font-weight="900">SHORT PATH</text>
-<rect x="410" y="340" width="120" height="10" rx="5" fill="#fff"/><rect x="575" y="90" width="120" height="10" rx="5" fill="#fff"/><line x1="470" y1="340" x2="635" y2="100" stroke="#b8ffd0" stroke-width="6"/><circle cx="470" cy="340" r="12" fill="#ffd37a" filter="url(#glow)"><animate attributeName="cx" values="470;635;470" dur="3s" repeatCount="indefinite"/><animate attributeName="cy" values="340;100;340" dur="3s" repeatCount="indefinite"/></circle><text x="555" y="390" text-anchor="middle" fill="#b8ffd0" font-size="20" font-weight="900">LONGER PATH</text>
-<path d="M420 285 h170" stroke="#ffd37a" stroke-width="4" marker-end="url(#arrow)"/><text x="505" y="315" text-anchor="middle" fill="#ffd37a" font-size="16" font-weight="800">clock moves sideways</text>
-<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#ffd37a"/></marker></defs>
-</svg>
-<div class="caption">From you, light inside my moving clock travels <span class="green">farther</span> for one tick.</div>
 </div>
-
-<div class="frame" data-step="3">
-<svg class="visual" viewBox="0 0 720 470" role="img" aria-label="Same light speed plus longer path means more time between ticks">
-<text x="360" y="46" text-anchor="middle" fill="#f7f9ff" font-size="22" font-weight="900">THE PART THAT FORCES TIME TO CHANGE</text>
-<g transform="translate(65,95)"><rect width="170" height="115" rx="20" fill="#0c203a" stroke="#75ddff" stroke-width="3"/><text x="85" y="44" text-anchor="middle" fill="#75ddff" font-size="19" font-weight="900">SAME</text><text x="85" y="72" text-anchor="middle" fill="#fff" font-size="23" font-weight="900">LIGHT SPEED</text><text x="85" y="98" text-anchor="middle" fill="#aab9d2" font-size="13">cannot increase</text></g>
-<text x="270" y="160" fill="#ffd37a" font-size="44" font-weight="900">+</text>
-<g transform="translate(315,95)"><rect width="170" height="115" rx="20" fill="#10243a" stroke="#b8ffd0" stroke-width="3"/><text x="85" y="44" text-anchor="middle" fill="#b8ffd0" font-size="19" font-weight="900">LONGER</text><text x="85" y="72" text-anchor="middle" fill="#fff" font-size="23" font-weight="900">DISTANCE</text><text x="85" y="98" text-anchor="middle" fill="#aab9d2" font-size="13">for the same tick</text></g>
-<text x="520" y="160" fill="#ffd37a" font-size="44" font-weight="900">=</text>
-<g transform="translate(555,95)"><rect width="110" height="115" rx="20" fill="#2b2315" stroke="#ffd37a" stroke-width="3"/><text x="55" y="42" text-anchor="middle" fill="#ffd37a" font-size="18" font-weight="900">MORE</text><text x="55" y="71" text-anchor="middle" fill="#fff" font-size="22" font-weight="900">TIME</text><text x="55" y="98" text-anchor="middle" fill="#aab9d2" font-size="13">between ticks</text></g>
-<text x="150" y="290" fill="#75ddff" font-size="18" font-weight="900">YOUR CLOCK</text><line x1="150" y1="315" x2="610" y2="315" stroke="#29405f" stroke-width="6" stroke-linecap="round"/><g fill="#75ddff"><rect x="165" y="295" width="6" height="40" rx="3"/><rect x="225" y="295" width="6" height="40" rx="3"/><rect x="285" y="295" width="6" height="40" rx="3"/><rect x="345" y="295" width="6" height="40" rx="3"/><rect x="405" y="295" width="6" height="40" rx="3"/><rect x="465" y="295" width="6" height="40" rx="3"/><rect x="525" y="295" width="6" height="40" rx="3"/><rect x="585" y="295" width="6" height="40" rx="3"/></g>
-<text x="150" y="385" fill="#b8ffd0" font-size="18" font-weight="900">MY CLOCK</text><line x1="150" y1="410" x2="610" y2="410" stroke="#29405f" stroke-width="6" stroke-linecap="round"/><g fill="#b8ffd0"><rect x="165" y="390" width="6" height="40" rx="3"/><rect x="255" y="390" width="6" height="40" rx="3"/><rect x="345" y="390" width="6" height="40" rx="3"/><rect x="435" y="390" width="6" height="40" rx="3"/><rect x="525" y="390" width="6" height="40" rx="3"/></g>
-</svg>
-<div class="caption">Light cannot go faster. So my moving clock’s ticks must be <span class="gold">farther apart in your time.</span></div>
+<div class="shared-strip"><div class="shared-line"></div><div class="shared-label">DEPARTURE · SAME EVENT</div><div class="shared-line r"></div></div>
+<div class="caption"><strong>Nothing is different yet.</strong> They have experienced the same amount of life.</div>
 </div>
-
-<div class="frame" data-step="4">
-<svg class="visual" viewBox="0 0 720 470" role="img" aria-label="Clock, heartbeat, chemistry and cell aging all slow together relative to Earth">
-<text x="360" y="42" text-anchor="middle" fill="#f7f9ff" font-size="22" font-weight="900">YOUR BODY DOESN’T HAVE A SEPARATE CLOCK</text>
-<g transform="translate(70,100)"><circle cx="70" cy="70" r="55" fill="#0c203a" stroke="#75ddff" stroke-width="3"/><text x="70" y="79" text-anchor="middle" fill="#fff" font-size="44">⌚</text><text x="70" y="150" text-anchor="middle" fill="#75ddff" font-size="16" font-weight="900">WATCH</text></g>
-<g transform="translate(230,100)"><circle cx="70" cy="70" r="55" fill="#0c203a" stroke="#75ddff" stroke-width="3"/><text x="70" y="82" text-anchor="middle" fill="#fff" font-size="48">♥</text><text x="70" y="150" text-anchor="middle" fill="#75ddff" font-size="16" font-weight="900">HEART</text></g>
-<g transform="translate(390,100)"><circle cx="70" cy="70" r="55" fill="#0c203a" stroke="#75ddff" stroke-width="3"/><circle cx="70" cy="70" r="12" fill="#fff"/><ellipse cx="70" cy="70" rx="45" ry="18" fill="none" stroke="#fff" stroke-width="3" transform="rotate(35 70 70)"/><ellipse cx="70" cy="70" rx="45" ry="18" fill="none" stroke="#fff" stroke-width="3" transform="rotate(-35 70 70)"/><text x="70" y="150" text-anchor="middle" fill="#75ddff" font-size="16" font-weight="900">ATOMS</text></g>
-<g transform="translate(550,100)"><circle cx="70" cy="70" r="55" fill="#0c203a" stroke="#75ddff" stroke-width="3"/><circle cx="53" cy="70" r="24" fill="none" stroke="#fff" stroke-width="4"/><circle cx="87" cy="70" r="24" fill="none" stroke="#fff" stroke-width="4"/><text x="70" y="150" text-anchor="middle" fill="#75ddff" font-size="16" font-weight="900">CELLS</text></g>
-<text x="100" y="315" fill="#aab9d2" font-size="16" font-weight="800">FROM EARTH:</text><line x1="220" y1="310" x2="630" y2="310" stroke="#29405f" stroke-width="6"/><g fill="#b8ffd0"><circle cx="240" cy="310" r="8"/><circle cx="315" cy="310" r="8"/><circle cx="390" cy="310" r="8"/><circle cx="465" cy="310" r="8"/><circle cx="540" cy="310" r="8"/><circle cx="615" cy="310" r="8"/></g>
-<text x="100" y="385" fill="#aab9d2" font-size="16" font-weight="800">INSIDE SHIP:</text><line x1="220" y1="380" x2="630" y2="380" stroke="#29405f" stroke-width="6"/><g fill="#b8ffd0"><circle cx="240" cy="380" r="8"/><circle cx="315" cy="380" r="8"/><circle cx="390" cy="380" r="8"/><circle cx="465" cy="380" r="8"/><circle cx="540" cy="380" r="8"/><circle cx="615" cy="380" r="8"/></g><text x="425" y="425" text-anchor="middle" fill="#ffd37a" font-size="17" font-weight="900">everything still feels normal to me</text>
-</svg>
-<div class="caption">Clock ticks, heartbeats, chemistry and aging are all physical change. <span class="green">They stay in sync with each other.</span></div>
-</div>
-
-<div class="frame" data-step="5">
-<svg class="visual" viewBox="0 0 720 470" role="img" aria-label="Two people reunite with different amounts of elapsed time">
-<text x="360" y="42" text-anchor="middle" fill="#f7f9ff" font-size="22" font-weight="900">WE MEET AGAIN</text>
-<path d="M155 390 L155 95" stroke="#75ddff" stroke-width="7"/><path d="M155 390 Q560 250 155 95" fill="none" stroke="#b8ffd0" stroke-width="7"/>
-<circle cx="155" cy="390" r="10" fill="#fff"/><circle cx="155" cy="95" r="10" fill="#fff"/>
-<g fill="#75ddff"><circle cx="155" cy="350" r="5"/><circle cx="155" cy="315" r="5"/><circle cx="155" cy="280" r="5"/><circle cx="155" cy="245" r="5"/><circle cx="155" cy="210" r="5"/><circle cx="155" cy="175" r="5"/><circle cx="155" cy="140" r="5"/></g>
-<g fill="#b8ffd0"><circle cx="260" cy="346" r="5"/><circle cx="380" cy="300" r="5"/><circle cx="500" cy="250" r="5"/><circle cx="382" cy="190" r="5"/><circle cx="260" cy="140" r="5"/></g>
-<text x="95" y="245" text-anchor="middle" fill="#75ddff" font-size="17" font-weight="900">MORE TICKS</text><text x="555" y="250" text-anchor="middle" fill="#b8ffd0" font-size="17" font-weight="900">FEWER TICKS</text>
-<g transform="translate(115,365)"><circle cx="40" cy="0" r="22" fill="#fff"/></g><g transform="translate(115,70)"><circle cx="40" cy="0" r="22" fill="#fff"/></g>
-<g transform="translate(450,82)"><rect width="210" height="120" rx="18" fill="#0c1930" stroke="#ffd37a" stroke-width="3"/><text x="105" y="36" text-anchor="middle" fill="#aab9d2" font-size="15">ELAPSED BETWEEN</text><text x="105" y="58" text-anchor="middle" fill="#aab9d2" font-size="15">THE SAME TWO MEETINGS</text><text x="105" y="88" text-anchor="middle" fill="#75ddff" font-size="19" font-weight="900">YOU: MORE TIME</text><text x="105" y="112" text-anchor="middle" fill="#b8ffd0" font-size="19" font-weight="900">ME: LESS TIME</text></g>
-</svg>
-<div class="caption">Same departure. Same reunion. I simply accumulated <span class="green">fewer physical ticks</span> along my path.</div>
-</div>
-
-</div>
-<div class="nav"><button id="prev" disabled>← Back</button><button id="next" class="primary">Next picture →</button></div>
-<div class="small" id="stepText">1 of 6</div>
-</div>
-
-<section class="try">
-<h2>Now stretch it yourself</h2>
-<p>Move the speed slider. Watch my ticks spread out relative to yours.</p>
-<div class="range-row"><input id="speed" type="range" min="0" max="99" value="80" step="1"><b id="speedLabel">80%</b></div>
-<div class="tick-compare"><div class="tick-card"><div class="tick-title">YOUR TIME</div><div class="ticks" id="earthTicks"></div></div><div class="tick-card"><div class="tick-title">MY TIME WHILE MOVING</div><div class="ticks" id="travTicks"></div></div></div>
-<div class="result" id="result"></div>
 </section>
 
-<details><summary>But isn’t there one real “now” for both of us?</summary><p>No. That is the everyday assumption relativity breaks. There is no universal master clock that every place in the universe shares. When two observers move differently, they can disagree about how much time lies between events and even which distant events count as “now.” When they reunite and put their clocks side by side, the different elapsed times are physical and measurable.</p></details>
-<div class="footer">The picture to remember: same light speed + a longer moving path forces more time between moving ticks.</div>
+<section class="scene" id="travel">
+<div class="scene-head"><div class="scene-num">2 · One leaves</div><h2>Now give them different paths through the universe.</h2><p class="one-line">Drag the speed. Watch how many “life moments” fit between departure and reunion.</p></div>
+<div class="panel">
+<div class="controlbar">
+<div class="speed-top"><b>Traveler speed</b><div class="speed-value" id="speedValue">90% of light speed</div></div>
+<input id="speed" type="range" min="0" max="999" step="1" value="900" aria-label="Traveler speed">
+<div class="presets"><button class="preset" data-speed="0">0%</button><button class="preset" data-speed="500">50%</button><button class="preset active" data-speed="900">90%</button><button class="preset" data-speed="990">99%</button><button class="preset" data-speed="999">99.9%</button></div>
 </div>
-<script>
-const frames=[...document.querySelectorAll('.frame')],progress=document.getElementById('progress'),prev=document.getElementById('prev'),next=document.getElementById('next'),stepText=document.getElementById('stepText');let step=0;
-frames.forEach((_,i)=>{const b=document.createElement('button');b.setAttribute('aria-label','Go to picture '+(i+1));b.addEventListener('click',()=>show(i));progress.appendChild(b)});
-function show(i){step=Math.max(0,Math.min(frames.length-1,i));frames.forEach((f,n)=>f.classList.toggle('active',n===step));[...progress.children].forEach((b,n)=>b.classList.toggle('active',n===step));prev.disabled=step===0;next.textContent=step===frames.length-1?'Start over ↺':'Next picture →';stepText.textContent=(step+1)+' of '+frames.length;window.scrollTo({top:0,behavior:'smooth'})}
-prev.addEventListener('click',()=>show(step-1));next.addEventListener('click',()=>show(step===frames.length-1?0:step+1));show(0);
+<div class="world-wrap">
+<svg class="world-svg" viewBox="0 0 800 500" aria-label="Two people taking different paths between departure and reunion">
+<text x="44" y="48" fill="#aab8cc" font-size="14" font-weight="800">REUNION</text>
+<line x1="95" y1="70" x2="705" y2="70" stroke="#324b69" stroke-width="2"/>
+<circle cx="200" cy="70" r="9" fill="#f7f9ff"/><circle cx="600" cy="70" r="9" fill="#f7f9ff"/>
+<line x1="95" y1="430" x2="705" y2="430" stroke="#324b69" stroke-width="2"/>
+<text x="44" y="457" fill="#aab8cc" font-size="14" font-weight="800">DEPARTURE</text>
+<circle cx="400" cy="430" r="10" fill="#f7f9ff"/>
+<path id="earthPath" d="M400 430 L400 70" fill="none" stroke="#6fe1ff" stroke-width="7" stroke-linecap="round"/>
+<path id="travelerPath" d="M400 430 L650 250 L400 70" fill="none" stroke="#9dffc4" stroke-width="7" stroke-linecap="round"/>
+<g id="earthLifeDots"></g><g id="travLifeDots"></g>
+<text x="326" y="255" fill="#6fe1ff" font-size="16" font-weight="900">Earth life</text>
+<text x="626" y="245" fill="#9dffc4" font-size="16" font-weight="900">Traveler life</text>
+<text id="earthLifeCount" x="326" y="279" fill="#dce8f5" font-size="13"></text>
+<text id="travLifeCount" x="626" y="269" fill="#dce8f5" font-size="13"></text>
+</svg>
+<div class="legend"><span class="earth">Earth person's physical moments</span><span class="trav">Traveler's physical moments</span></div>
+<div class="caption" id="pathCaption"></div>
+</div>
+</div>
+</section>
 
-const speed=document.getElementById('speed'),speedLabel=document.getElementById('speedLabel'),earthTicks=document.getElementById('earthTicks'),travTicks=document.getElementById('travTicks'),result=document.getElementById('result');
-function renderTicks(el,count,cls=''){el.innerHTML='';for(let i=0;i<count;i++){const d=document.createElement('span');d.className='tick '+cls;el.appendChild(d)}}
-function update(){const p=+speed.value,b=p/100,factor=Math.sqrt(1-b*b);speedLabel.textContent=p+'%';const earth=10,trav=Math.max(1,Math.round(earth*factor));renderTicks(earthTicks,earth);renderTicks(travTicks,trav,'trav');if(p===0){result.innerHTML='At rest together: <span>10 ticks = 10 ticks.</span>'}else{result.innerHTML='During your 10 ticks, I accumulate about <span>'+trav+' ticks.</span>'}}
-speed.addEventListener('input',update);update();
+<section class="scene" id="body">
+<div class="scene-head"><div class="scene-num">3 · What “less time” means</div><h2>The traveler does not just read a smaller number. Less physical life happened.</h2><p class="one-line">Aging is made of real physical processes. They all accumulate according to the time that person experiences.</p></div>
+<div class="panel visual">
+<div class="process-grid">
+<div class="process"><div class="process-title"><div class="icon">♥</div>Heartbeats</div><div class="bar-label"><span>Earth person</span><span>100%</span></div><div class="bar"><div class="fill earth-fill"></div></div><div class="bar-label"><span>Traveler</span><span class="travPct">44%</span></div><div class="bar"><div class="fill travFill"></div></div></div>
+<div class="process"><div class="process-title"><div class="icon">✦</div>Brain & nerve activity</div><div class="bar-label"><span>Earth person</span><span>100%</span></div><div class="bar"><div class="fill earth-fill"></div></div><div class="bar-label"><span>Traveler</span><span class="travPct">44%</span></div><div class="bar"><div class="fill travFill"></div></div></div>
+<div class="process"><div class="process-title"><div class="icon">◉</div>Chemical reactions</div><div class="bar-label"><span>Earth person</span><span>100%</span></div><div class="bar"><div class="fill earth-fill"></div></div><div class="bar-label"><span>Traveler</span><span class="travPct">44%</span></div><div class="bar"><div class="fill travFill"></div></div></div>
+<div class="process"><div class="process-title"><div class="icon">⌁</div>Cell aging & repair</div><div class="bar-label"><span>Earth person</span><span>100%</span></div><div class="bar"><div class="fill earth-fill"></div></div><div class="bar-label"><span>Traveler</span><span class="travPct">44%</span></div><div class="bar"><div class="fill travFill"></div></div></div>
+</div>
+<div class="ratio-badge" id="bodyRatio">Traveler experiences 44% as much elapsed time during the trip</div>
+<div class="caption"><strong>This is why the traveler is younger.</strong> Not because their watch malfunctioned. Their body genuinely went through less elapsed time.</div>
+</div>
+</section>
+
+<section class="scene" id="why">
+<div class="scene-head"><div class="scene-num">4 · But HOW can time itself differ?</div><h2>Watch one flash of light cross the traveler’s cabin.</h2><p class="one-line">This is not a clock. It is just two real events: light leaves the traveler’s hand, then hits the ceiling.</p></div>
+<div class="panel visual">
+<div class="flash-grid">
+<div class="flash-card">
+<div class="flash-title">WHAT THE TRAVELER SEES</div>
+<div class="cabin"><div class="ceiling"></div><div class="mini-person"><div class="mh"></div><div class="mb"></div></div><div class="flash-start"></div><div class="light-path vertical-path"></div></div>
+<div style="position:absolute;left:0;right:0;bottom:14px;text-align:center;color:#aab8cc;font-size:13px;font-weight:800">Light goes straight up</div>
+</div>
+<div class="flash-card">
+<div class="flash-title">WHAT EARTH SEES</div>
+<div class="ghost-start"></div><div class="ghost-end"></div><div class="mini-person moving-person"><div class="mh"></div><div class="mb" style="background:#76d997"></div></div><div class="flash-start" style="left:31%;bottom:100px"></div><div class="light-path diagonal-path"></div><div class="arrow">→</div>
+<div style="position:absolute;left:0;right:0;bottom:14px;text-align:center;color:#aab8cc;font-size:13px;font-weight:800">Ship moves while light is in flight</div>
+</div>
+</div>
+<div class="formula-strip"><div class="formula-chip">Light speed stays the same</div><div class="plus">+</div><div class="formula-chip">Earth sees a longer path</div><div class="equals">=</div><div class="formula-chip formula-result">Earth measures more time between those events</div></div>
+<div class="caption"><strong>This is the crack in “one universal time.”</strong> The same two physical events can have different elapsed times for people moving differently, because everyone must still measure light at the same speed.</div>
+</div>
+</section>
+
+<section class="scene" id="normal">
+<div class="scene-head"><div class="scene-num">5 · What does the traveler feel?</div><h2>Completely normal.</h2><p class="one-line">Their own heartbeat, thoughts, chemistry, and movement all stay synchronized with their own time.</p></div>
+<div class="panel visual">
+<div class="normal-grid">
+<div class="normal-card"><div class="human"><div class="head"></div><div class="body"></div><div class="arm l"></div><div class="arm r"></div><div class="leg l"></div><div class="leg r"></div><div class="heart"></div></div><div style="font-weight:900">Person on Earth</div><div class="normal-big">Life feels normal</div><div class="normal-list"><div class="normal-pill">heartbeat normal</div><div class="normal-pill">thoughts normal</div><div class="normal-pill">aging normal</div></div></div>
+<div class="normal-card"><div class="human"><div class="head"></div><div class="body" style="background:linear-gradient(180deg,#b9ffd0,#50aa77)"></div><div class="arm l" style="background:#86dba5"></div><div class="arm r" style="background:#86dba5"></div><div class="leg l" style="background:#478f66"></div><div class="leg r" style="background:#478f66"></div><div class="heart"></div></div><div style="font-weight:900">Traveler</div><div class="normal-big">Life feels normal</div><div class="normal-list"><div class="normal-pill">heartbeat normal</div><div class="normal-pill">thoughts normal</div><div class="normal-pill">aging normal</div></div></div>
+</div>
+<div class="caption">Nobody feels “slow.” <strong>Each person’s own time is their normal time.</strong> The difference becomes undeniable when they meet again and compare how much life happened.</div>
+</div>
+</section>
+
+<section class="scene" id="reunion">
+<div class="scene-head"><div class="scene-num">6 · Reunion</div><h2>Now put them back in the same place.</h2><p class="one-line">They started together at 30. Earth experienced 30 more years. The traveler experienced less.</p></div>
+<div class="panel reunion">
+<div class="shared-strip"><div class="shared-line"></div><div class="shared-label">REUNION · SAME EVENT AGAIN</div><div class="shared-line r"></div></div>
+<div class="reunion-stage">
+<div class="reunion-person"><div class="human"><div class="head"></div><div class="body"></div><div class="arm l"></div><div class="arm r"></div><div class="leg l"></div><div class="leg r"></div><div class="heart"></div></div><div class="reunion-label">EARTH PERSON</div><div class="reunion-age">Age 60.0</div></div>
+<div class="vs">vs</div>
+<div class="reunion-person"><div class="human"><div class="head"></div><div class="body" style="background:linear-gradient(180deg,#b9ffd0,#50aa77)"></div><div class="arm l" style="background:#86dba5"></div><div class="arm r" style="background:#86dba5"></div><div class="leg l" style="background:#478f66"></div><div class="leg r" style="background:#478f66"></div><div class="heart"></div></div><div class="reunion-label">TRAVELER</div><div class="reunion-age" id="travelerAge">Age 43.1</div></div>
+</div>
+<div class="gap-card"><span>REAL DIFFERENCE IN LIVED TIME</span><b id="ageGap">16.9 years</b></div>
+<div class="caption"><strong>Both agree on the result because they are together again.</strong> One person really experienced fewer years of life between departure and reunion.</div>
+</div>
+</section>
+
+<section class="scene" id="mental-model">
+<div class="scene-head"><div class="scene-num">7 · The mental flip</div><h2>The part our everyday intuition gets wrong.</h2><p class="one-line">We imagine one invisible river of time carrying everyone forward together. Nature does not work that way.</p></div>
+<div class="panel visual">
+<div class="final-visual">
+<div class="model-card bad"><div class="model-title">The intuition we grow up with</div><div class="river"></div><div class="model-note">One master flow of time for the whole universe</div></div>
+<div class="model-card"><div class="model-title">What actually happens</div><div class="paths"><div class="p1" style="color:#6fe1ff"></div><div class="p2" style="color:#9dffc4"></div></div><div class="model-note">Each person accumulates time along their own path</div></div>
+</div>
+<div class="final-line">Same departure. Same reunion. <span>Different amount of life in between.</span></div>
+</div>
+</section>
+
+<section class="more">
+<details><summary>If you want the physics name</summary><p>The time a person personally accumulates along their path is called <strong>proper time</strong>. Different paths through spacetime between the same two meetings can contain different amounts of proper time. The traveler’s turnaround makes the round trip different from Earth’s path, so when they reunite the traveler has accumulated less.</p></details>
+</section>
+<div class="footer">Simplified round trip: constant outbound/inbound speed with a quick turnaround. The visual counts are illustrative; the elapsed-time calculation uses special relativity.</div>
+</div>
+
+<script>
+const speed=document.getElementById('speed');
+const speedValue=document.getElementById('speedValue');
+const earthPath=document.getElementById('earthPath');
+const travelerPath=document.getElementById('travelerPath');
+const earthLifeDots=document.getElementById('earthLifeDots');
+const travLifeDots=document.getElementById('travLifeDots');
+const earthLifeCount=document.getElementById('earthLifeCount');
+const travLifeCount=document.getElementById('travLifeCount');
+const pathCaption=document.getElementById('pathCaption');
+const travelerAge=document.getElementById('travelerAge');
+const ageGap=document.getElementById('ageGap');
+const bodyRatio=document.getElementById('bodyRatio');
+const presets=[...document.querySelectorAll('.preset')];
+
+function makeDot(x,y,color,r=5){const c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',r);c.setAttribute('fill',color);c.setAttribute('stroke','#07111f');c.setAttribute('stroke-width','2');return c}
+function ratioFromSpeed(p){const b=p/100;return Math.sqrt(Math.max(0,1-b*b))}
+function addDots(group,path,count,color){group.innerHTML='';const len=path.getTotalLength();for(let i=1;i<=count;i++){const pt=path.getPointAtLength(len*(i/(count+1)));group.appendChild(makeDot(pt.x,pt.y,color,5.2))}}
+function update(){const p=+speed.value/10;const ratio=ratioFromSpeed(p);const earthYears=30;const travelerYears=earthYears*ratio;const tAge=30+travelerYears;const gap=earthYears-travelerYears;const earthDots=18;const travDots=Math.max(1,Math.round(earthDots*ratio));speedValue.textContent=(p===Math.round(p)?p.toFixed(0):p.toFixed(1))+'% of light speed';addDots(earthLifeDots,earthPath,earthDots,'#6fe1ff');addDots(travLifeDots,travelerPath,travDots,'#9dffc4');earthLifeCount.textContent=earthDots+' life markers';travLifeCount.textContent=travDots+' life markers';const pct=Math.max(1,ratio*100);document.querySelectorAll('.travFill').forEach(el=>el.style.width=pct+'%');document.querySelectorAll('.travPct').forEach(el=>el.textContent=Math.round(pct)+'%');bodyRatio.textContent='Traveler experiences '+(p===0?'100':Math.round(pct))+'% as much elapsed time during the trip';travelerAge.textContent='Age '+tAge.toFixed(1);ageGap.textContent=gap.toFixed(1)+' years';if(p===0){pathCaption.innerHTML='<strong>No relative travel:</strong> both people accumulate the same amount of life.'}else if(p<70){pathCaption.innerHTML='<strong>The difference is real but still modest.</strong> The traveler accumulates fewer physical moments between the same departure and reunion.'}else{pathCaption.innerHTML='<strong>Same start. Same reunion.</strong> At '+(p===Math.round(p)?p.toFixed(0):p.toFixed(1))+'% of light speed, the traveler accumulates only '+Math.round(pct)+'% as much elapsed time during the trip.'}presets.forEach(b=>b.classList.toggle('active',+b.dataset.speed===+speed.value))}
+speed.addEventListener('input',update);presets.forEach(b=>b.addEventListener('click',()=>{speed.value=b.dataset.speed;update()}));
+function seedPulses(id,n,color){const el=document.getElementById(id);for(let i=0;i<n;i++){const d=document.createElement('span');d.className='pulse-dot';d.style.background=color;el.appendChild(d)}}seedPulses('startEarthPulses',9,'#6fe1ff');seedPulses('startTravPulses',9,'#9dffc4');
+update();
 </script>
 </body>
 </html>
